@@ -51,7 +51,7 @@ body {
 
 .barraTimer{ /*Barra do cronometro*/
     display: inline-flex;
-    justify-content: start;
+    justify-content: space-between;
     text-align:start;
     background-color: #D9D9D9;
     border-style:solid;

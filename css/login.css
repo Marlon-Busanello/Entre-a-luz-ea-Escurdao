@@ -1,40 +1,120 @@
-.titulo{
-    color: #e8a4ff;
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color1: #EBECF0;
+    --fontSize0: 8px;
+    --fontSize1: 12px;
+    --fontSize2: 14px;
+    --fontSize3: 18px;
+}
+
+body {
+    font-family: 'Chaillot', sans-serif;
+    background-color: var(--color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+}
+
+.login_page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20PX;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.tittle {
+
+    color: #000000;
+    font-size: var(--fontSize1);
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.input {
+    margin-bottom: -10px;
+    background-color: var(--color1);
+    height: 3px;
+    /* width: 100%; */
+    padding: 16px;
+    outline: none;
+    border: none;
+    box-shadow: inset 1px 1px 3px 0px rgb(32 36 75 / 29%), inset -2px -4px 4px 0 rgb(255 255 255);
+    border-radius: 20px;
+    
+
+}
+
+.userpass {
+    width: 80%;
+    
+}
+
+.input::placeholder {
+    font-size: 10px;
+
+}
+
+.login_btn {
+
+    font-family: cursive;
+    color: rgb(0, 0, 0);
+    height: 10px;
+    font-size: var(--fontSize1);
+    width: 65%;
+    border-radius: 20px;
+    padding: 15px;
+    border: 0;
+    cursor: pointer;
+    line-height: var(--fontSize1);
+    /* margin: 0 auto; */
+    /* transition: 250ms; */
+
+}
+
+.icons {
+    height: 25px;
+    /* width: 40px; */
+    display: flex;
+    gap: 10px;
+
+}
+
+.squ {
+    padding: 7px;
+    height: 20px;
+    width: 20px;
+    /* width: 15px; */
+    border-radius: 5px;
+    align-items: center;
+}
+
+.icon_style {
+    color: rgb(101, 100, 108);
+    width: 10px;
+}
+
+.lock {
+    color: rgb(0, 0, 0);
+}
+
+/*.titulo{ 
+    color: #000000;
     font-family: 'Chaillot', sans-serif;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    margin-block-end: 100px;
-}
+    margin-top: %;
+} */
 
-.usuario{
-    color: #000000;
-    font-family: Metal Mania;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.senha{
-    color: #000000;
-    font-family: Metal Mania;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 200;
-}
 
 .footer {
     background-color: #000; /* Cor de fundo preta */

@@ -16,16 +16,20 @@
         </div>
       </section>  
 
-      <section class="barraTimer"> <!-- section para o cronometro -->
-        <div> <!-- imagem para o cronometro -->
-            <img src="css/img/timer.png" alt="imagem para o cronometro" class="Timer">
+      <form name="form_main">
+        <div>
+          <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
         </div>
-        <div> <!-- div para exibir o tempo passando do cronometro -->
-            <p class="Contador">00:00:00</p>
-        </div>
-      </section>
+      
+        <br />
+      
+        <button type="button" name="start">start</button>
+        <button type="button" name="pause">pause</button>
+        <button type="button" name="reset">reset</button>
+      </form>
 
-      <section class="barraDados"> <!-- section para a ferramenta de rolagem de dados -->
+      <!-- section para a ferramenta de rolagem de dados -->
+      <section class="barraDados"> 
         <div> <!-- botao para D20 -->
             <button type="button" class="buttonsDice"> <img src="css/img/d20.png" alt="imagem para o botao de D20" class="imgDice" /></button>
         </div>
@@ -73,5 +77,5 @@
         <div    class="tabTitle"><h2>ANOTAÇÕES</h2></div>
     </section>
 </body>
-
+<script src="js/script.js"></script>
 </html>
