@@ -59,24 +59,47 @@ body {
     border-color:#CDCAAC ;
     margin-left:15% ;
     box-sizing: content-box;
-    width: 220px;
+    width: 100%;
     height: 50px;
+    align-items: center;
 }
 
 .Timer {
     height:50px;
     width: 50px;
     background-color: #898989;
-    image-resolution: 100%;
+    image-resolution: 150%;
     border-color: black;
 }
 
 .Contador{ /*String do contador*/
-    margin-top: 5.5%;
-    margin-left: 17%;
-    font-size: 35px;
+    font-size:20px;
     justify-content: center;
+    color: black;
+    font-family: 'Metal Mania';
+   
 }
+
+
+.buttonsTimer{
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    
+}
+
+.imgTimer{
+    width: 50px;    
+    height: 50px;
+    background-color: transparent;
+
+}
+
+
+
+
 
 /* Sistema de dados*/
 .barraDados{
