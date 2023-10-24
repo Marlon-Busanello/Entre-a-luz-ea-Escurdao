@@ -73,8 +73,11 @@ body {
 }
 
 .Contador{ /*String do contador*/
-    font-size:20px;
+    font-size:25px;
+    width: 40%;
     justify-content: center;
+    text-align: end;
+    padding: 3%;
     color: black;
     font-family: 'Metal Mania';
    
