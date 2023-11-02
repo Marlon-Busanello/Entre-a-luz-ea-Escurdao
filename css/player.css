@@ -1,7 +1,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+*{
+    margin: 0;
+    padding: 0;
+}
 
 body {
+    display: flex;
     background-image: url('img/fundo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -22,6 +28,10 @@ body {
     height: 80px;
     display: flex;
     align-items: center;
+
+
+  max-width: auto;
+  min-width: 350px;
 
     justify-content: space-between;
     color: white; /* Cor do texto */
@@ -59,7 +69,7 @@ body {
     border-color:#CDCAAC ;
     margin-left:15% ;
     box-sizing: content-box;
-    width: 100%;
+    width: 350px;
     height: 50px;
     align-items: center;
 }
@@ -73,6 +83,7 @@ body {
 }
 
 .Contador{ /*String do contador*/
+    width: 100px;
     font-size:20px;
     justify-content: center;
     color: black;
@@ -150,17 +161,62 @@ body {
 
 /*Visualizacao das ficha e anotacoes*/
 .viewFile{ /*Aba de visualizacao de arquivos dpo mestre*/
-    width: 770px;
-    height: 500px;
+    width: 900px;
+    height: 650px;
+    padding: 10px;
     margin-left: 5%;
-    margin-top: 13%;
-    background-color: #898989;
+    margin-top: 10%;
+    background-color: rgb(243, 230, 214);
     border-style:solid;
     border-width:2px;
-    border-color:#CDCAAC
+    border-color:#CDCAAC;
+    overflow: hidden;
+    
    
    
 }
+
+/* botao de editar ficha*/
+.btnEdit{
+position: fixed;
+margin-top: 0px;
+margin-left: 870px;
+padding: 1px;
+}
+.btnEdit img{
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+}
+.btnEdit button{
+    background-color: transparent;
+    border: none;
+}
+
+/*Informaçoes basicas*/
+
+.basicInformation{
+   margin: 5px;
+   padding: 2px;
+}
+
+.basicInformation div{
+    display: inline-flex ;
+    margin: 2px;
+    padding: 2px;
+}
+
+
+/* Valores de habilidade*/
+.abilityValues{
+    width: 3rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+
+
 
 .anotacoes{/*Biblioteca do mestre*/
 

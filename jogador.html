@@ -7,74 +7,133 @@
     <link rel="stylesheet" href="css/player.css">
 </head>
 
-<header> <!-- header para fazer a barra superior da area do mestre -->
-    <nav class="nav"> <!-- barra de navegação da página-->
 
-      <section class="logo"> <!-- section para o titulo da página -->
-        <div> 
-            <img src="css/img/logo.jpg" class="logo"/>
-        </div>
-      </section>  
-
-      <form name="form_main" class="barraTimer">
-        
-        <button type="button" name="start" class="buttonsDice" ><img src="css/img/download.png" alt="" class="imgTimer"></button>
-        <button type="button" name="pause" class="buttonsDice"><img src="css/img/stop.png" alt="" class="imgDice"></button>
-        <button type="button" name="reset" class="buttonsDice"><img src="css/img/reset.png" alt="" class="imgDice"></button>
-
-        <div class="Contador">
-            <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
-          </div>
-      </form>
-
-      <!-- section para a ferramenta de rolagem de dados -->
-      <section class="barraDados"> 
-        <div> <!-- botao para D20 -->
-            <button type="button" class="buttonsTime"> <img src="css/img/d20.png" alt="imagem para o botao de D20" class="imgTimer" /></button>
-        </div>
-        <div> <!-- botao para D12 -->
-            <button type="button" class="buttonsTime" > <img src="css/img/d12.png" alt="imagem para o botao de D12" class="imgTimer" /></button>
-        </div>
-        <div> <!-- botao para D10 -->
-            <button type="button" class="buttonsTimee"> <img src="css/img/d10.png" alt="imagem para o botao de D10"  class="imgTimer"/></button>
-        </div>
-        <div> <!-- botao para D8 -->
-            <button type="button" class="buttonsTime"> <img src="css/img/d8.png" alt="imagem para o botao de D8" class="imgTimer" /></button>
-        </div>
-        <div> <!-- botao para D6 -->
-            <button type="button" class="buttonsDice"> <img src="css/img/d6.png" alt="imagem para o botao de D6"  class="imgDice"/></button>
-        </div>
-        <div> <!-- botao para D4 -->
-            <button type="button" class="buttonsDice"> <img src="css/img/d4.png" alt="imagem para o botao de D4" class="imgDice" /></button>
-        </div>
-        <div> <!-- botao para D100 -->
-            <button type="button" class="buttonsDice"> <img src="css/img/d100.png" alt="imagem para o botao de D100" class="imgDice" /></button>
-        </div>
-        <div> <!-- div para exibir o resultado da rolagem -->
-           <p class="resultDice">20</p>
-        </div>
-      </section>
-    </nav>
-</header>
 
 <body>
-    <section class="viewFile"> <!-- section aba ficha -->
-        <h2>FICHA</h2>
-        
-    </section>
+    <header> <!-- header para fazer a barra superior da area do mestre -->
+        <nav class="nav"> <!-- barra de navegação da página-->
+    
+          <section class="logo"> <!-- section para o titulo da página -->
+            <div> 
+                <img src="css/img/logo.jpg" class="logo"/>
+            </div>
+          </section>  
+    
+          <form name="form_main" class="barraTimer">
+            
+            <button type="button" name="start" class="buttonsDice" ><img src="css/img/download.png" alt="" class="imgTimer"></button>
+            <button type="button" name="pause" class="buttonsDice"><img src="css/img/stop.png" alt="" class="imgDice"></button>
+            <button type="button" name="reset" class="buttonsDice"><img src="css/img/reset.png" alt="" class="imgDice"></button>
+    
+            <div class="Contador">
+                <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
+              </div>
+          </form>
+    
+          <!-- section para a ferramenta de rolagem de dados -->
+          <section class="barraDados"> 
+            <div> <!-- botao para D20 -->
+                <button type="button" class="buttonsTime"> <img src="css/img/d20.png" alt="imagem para o botao de D20" class="imgTimer" /></button>
+            </div>
+            <div> <!-- botao para D12 -->
+                <button type="button" class="buttonsTime" > <img src="css/img/d12.png" alt="imagem para o botao de D12" class="imgTimer" /></button>
+            </div>
+            <div> <!-- botao para D10 -->
+                <button type="button" class="buttonsTimee"> <img src="css/img/d10.png" alt="imagem para o botao de D10"  class="imgTimer"/></button>
+            </div>
+            <div> <!-- botao para D8 -->
+                <button type="button" class="buttonsTime"> <img src="css/img/d8.png" alt="imagem para o botao de D8" class="imgTimer" /></button>
+            </div>
+            <div> <!-- botao para D6 -->
+                <button type="button" class="buttonsDice"> <img src="css/img/d6.png" alt="imagem para o botao de D6"  class="imgDice"/></button>
+            </div>
+            <div> <!-- botao para D4 -->
+                <button type="button" class="buttonsDice"> <img src="css/img/d4.png" alt="imagem para o botao de D4" class="imgDice" /></button>
+            </div>
+            <div> <!-- botao para D100 -->
+                <button type="button" class="buttonsDice"> <img src="css/img/d100.png" alt="imagem para o botao de D100" class="imgDice" /></button>
+            </div>
+            <div> <!-- div para exibir o resultado da rolagem -->
+               <p class="resultDice">20</p>
+            </div>
+          </section>
+        </nav>
+    </header>
 
-    <section > <!-- section para exibir a ficha -->
+    <div class="viewFile"> 
+        <!-- Botao para editar ficha -->
+        <div class="btnEdit">
+            <button id="botaoEditar"    >
+                <img src="css/img/lock-fill.svg" id="iconeEditar">
+            </button>
+        </div>
 
-    </section>
+        <!-- Informacoes baiscas  -->
+        <div class="basicInformation">
+            <div>
+                <h4>Nome: </h4>
+                <input type="text" class="caixaDeTexto" value="Nome" readonly>
+                
+            </div>
+            <div>
+                <h4>Idade: </h4>
+                <input type="number" class="caixaDeTexto" value="idade" readonly>
+                
+            </div>
+            <div>
+                <h4>Level: </h4>
+                <input type="number" class="caixaDeTexto" value="Texto 3" readonly>
+                
+            </div>
+            <br>
+            <div>
+                <h4>Raça: </h4>
+                <input type="text" class="caixaDeTexto" value="raça" readonly>
+            </div>
+            <div>
+                <h4>Classe: </h4>
+                <input type="text" class="caixaDeTexto" value="Nome" readonly>
+            </div>
 
-    <section > <!-- section aba anotações -->
-         <h2></h2>
-    </section>
 
-    <section class="anotacoes"> <!-- section para armazenar as anotaçoes do player -->
-        <img src="" alt="imagem de uma folha de caderno"/>
-        <div    class="tabTitle"><h2>ANOTAÇÕES</h2></div>
-    </section>
+        </div>
+
+
+        <!-- Valores de habilidade -->
+        <div>       
+            <div>
+                <input type="number" class="abilityValues" value="Texto 3" readonly>
+                <h3>Força</h3>
+            </div>
+            <div>
+                <input type="number" class="abilityValues" value="Texto 3" readonly>
+                <h3>Destreza</h3>
+            </div>
+            <div>
+                <input type="number" class="abilityValues" value="Texto 3" readonly>
+                <h3>Constituiçao</h3>
+            </div>
+            <div>
+                <input type="number" class="abilityValues" value="Texto 3" readonly>
+                <h3>Inteligencia</h3>
+            </div>
+            <div>
+                <input type="number" class="abilityValues" value="Texto 3" readonly>
+                <h3>Sabedoria</h3>
+            </div>
+            <div>
+                <input type="number" class="abilityValues" value="Texto 3" readonly>
+                <h3>Carisma</h3>
+            </div>
+            <div>
+                <input type="text" class="abilityValues" value="Texto 3" readonly>
+                <h3>Poder</h3>
+            </div>
+ 
+        </div>
+       
+    </div>
+ 
 </body>
-<script src="js/script.js"></script>
+<script src="js/scripJogador.js"></script>
 </html>
