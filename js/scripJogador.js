@@ -37,7 +37,12 @@ carregarValores();
 
 // Função para gerar um valor aleatório entre 1 e um número específico
 function rolarDado(maxValue, resultElement) {
-    const resultado = Math.floor(Math.random() * maxValue) + 1;
+    let resultado;
+    if (maxValue === 100) {
+      resultado = Math.floor(Math.random() * (maxValue + 1));
+    } else {
+      resultado = Math.floor(Math.random() * maxValue) + 1;
+    }
     resultElement.textContent = resultado;
   }
   
