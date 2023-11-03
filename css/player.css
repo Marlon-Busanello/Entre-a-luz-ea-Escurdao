@@ -157,11 +157,12 @@ body {
 
 /*Visualizacao das ficha e anotacoes*/
 .viewFile {
-    width: 900px;
+    width: 850px;
     height: 650px;
     padding: 10px;
-    margin-left: 5%;
-    margin-top: 10%;
+    margin-left: 2%;
+    margin-top: 7%;
+    margin-bottom: 1%;
     background-color: rgba(243, 230, 214, 0.5); /* O último valor (0.5) controla a transparência (de 0 a 1) */
     border-style: solid;
     border-width: 2px;
@@ -170,7 +171,6 @@ body {
     border-radius: 3%;
     position: relative; /* Adicione position: relative para criar um contexto de posicionamento para elementos filhos */
   }
-  
   /* botao de editar ficha */
   .btnEdit {
     position: absolute;
