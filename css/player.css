@@ -168,16 +168,18 @@ body {
     border-color: #CDCAAC;
     overflow: hidden;
     border-radius: 3%;
+    position: relative; /* Adicione position: relative para criar um contexto de posicionamento para elementos filhos */
+  }
+  
+  /* botao de editar ficha */
+  .btnEdit {
+    position: absolute;
+    top: 10px; /* Ajuste a distância do topo conforme necessário */
+    right: 10px; /* Ajuste a distância da direita conforme necessário */
+    padding: 1px;
   }
   
 
-/* botao de editar ficha*/
-.btnEdit{
-position: fixed;
-margin-top: 0px;
-margin-left: 870px;
-padding: 1px;
-}
 .btnEdit img{
     width: 25px;
     height: 25px;
