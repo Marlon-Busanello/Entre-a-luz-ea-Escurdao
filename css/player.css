@@ -8,7 +8,7 @@
 
 body {
     display: flex;
-    background-image: url('img/fundo.jpg');
+    background-image: url('img/vU3JTB6.gif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -156,21 +156,20 @@ body {
 }
 
 /*Visualizacao das ficha e anotacoes*/
-.viewFile{ /*Aba de visualizacao de arquivos dpo mestre*/
+.viewFile {
     width: 900px;
     height: 650px;
     padding: 10px;
     margin-left: 5%;
     margin-top: 10%;
-    background-color: rgb(243, 230, 214);
-    border-style:solid;
-    border-width:2px;
-    border-color:#CDCAAC;
+    background-color: rgba(243, 230, 214, 0.5); /* O último valor (0.5) controla a transparência (de 0 a 1) */
+    border-style: solid;
+    border-width: 2px;
+    border-color: #CDCAAC;
     overflow: hidden;
-    
-   
-   
-}
+    border-radius: 3%;
+  }
+  
 
 /* botao de editar ficha*/
 .btnEdit{
