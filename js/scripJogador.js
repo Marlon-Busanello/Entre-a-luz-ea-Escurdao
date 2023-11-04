@@ -1,39 +1,61 @@
- // Função para ativar/desativar a edição das caixas de texto
- function toggleEdicao() {
-    var caixasDeTexto = document.querySelectorAll(".abilityValues");
-    var botaoEditar = document.getElementById("botaoEditar");
-    var iconeEditar = document.getElementById("iconeEditar");
+var edicaoHabilitada = false;
+var files = [
+  document.getElementById("File1"),
+  document.getElementById("File2"),
+  document.getElementById("File3"),
+  document.getElementById("File4"),
+  document.getElementById("File5"),
+  document.getElementById("File6"),
+  document.getElementById("File7"),
+  document.getElementById("File8"),
+  document.getElementById("File9"),
+  document.getElementById("File10"),
+  document.getElementById("File11"),
+  document.getElementById("File12"),
+  document.getElementById("File13"),
+  document.getElementById("File14"),
+  document.getElementById("File15"),
+  document.getElementById("File16")
+];
 
-    if (caixasDeTexto[0].readOnly) {
-        for (var i = 0; i < caixasDeTexto.length; i++) {
-            caixasDeTexto[i].readOnly = false;
-        }
-        iconeEditar.src = "css/img/unlock-fill.svg";
-    } else {
-        for (var i = 0; i < caixasDeTexto.length; i++) {
-            caixasDeTexto[i].readOnly = true;
-        }
-        iconeEditar.src = "css/img/lock-fill.svg";
-        // Salvar os valores no localStorage
-        for (var i = 0; i < caixasDeTexto.length; i++) {
-            localStorage.setItem("abilityValues" + i, caixasDeTexto[i].value);
-        }
+// Carregar conteúdo do localStorage ao carregar a página
+window.onload = function() {
+  for (var i = 0; i < files.length; i++) {
+    var conteudoSalvo = localStorage.getItem(files[i].id);
+    if (conteudoSalvo) {
+      files[i].value = conteudoSalvo;
     }
+  }
+};
+
+// Salvar conteúdo no localStorage quando as caixas de texto perdem o foco
+for (var i = 0; i < files.length; i++) {
+  files[i].addEventListener("blur", function(e) {
+    if (edicaoHabilitada) {
+      localStorage.setItem(e.target.id, e.target.value);
+    }
+  });
 }
 
-// Carregar os valores do localStorage ao recarregar a página
-function carregarValores() {
-    var caixasDeTexto = document.querySelectorAll(".abilityValues");
-    for (var i = 0; i < caixasDeTexto.length; i++) {
-        caixasDeTexto[i].value = localStorage.getItem("abilityValues" + i) || "";
-    }
+function toggleEdicao() {
+  edicaoHabilitada = !edicaoHabilitada;
+
+  for (var i = 0; i < files.length; i++) {
+    files[i].readOnly = !edicaoHabilitada;
+  }
+
+  var imagemBotao = document.getElementById("imagemBotao");
+  if (edicaoHabilitada) {
+    imagemBotao.src = "editar.png";
+    imagemBotao.alt = "Editar";
+  } else {
+    imagemBotao.src = "desabilitar.png";
+    imagemBotao.alt = "Desabilitar";
+  }
 }
 
-// Adiciona um evento de clique ao botão
-document.getElementById("botaoEditar").addEventListener("click", toggleEdicao);
 
-// Carregar os valores ao carregar a página
-carregarValores();
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_//
 
 // Função para gerar um valor aleatório entre 1 e um número específico
 function rolarDado(maxValue, resultElement) {

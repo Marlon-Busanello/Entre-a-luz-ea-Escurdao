@@ -76,77 +76,99 @@
 
      <!-- div para ficha do player-->
     <div class="viewFile"> 
+      <div class="headerFile">
         <h1>Ficha do player</h1>
+       </div>
         <!-- Botao para editar ficha -->
         <div class="btnEdit">
-            <button id="botaoEditar"    >
-                <img src="css/img/lock-fill.svg" id="iconeEditar">
-            </button>
+          <button id="botaoEdicao" onclick="toggleEdicao()">
+            <img id="imagemBotao" src="editar.png" alt="Editar">
+          </button>
         </div>
 
         <!-- Informacoes baiscas  -->
         <div class="basicInformation">
+
             <div>
-                <h4>Nome: </h4>
-                <input type="text" class="caixaDeTexto" value="Nome" readonly>
-                
-            </div>
-            <div>
-                <h4>Idade: </h4>
-                <input type="number" class="caixaDeTexto" value="idade" readonly>
-                
-            </div>
-            <div>
-                <h4>Level: </h4>
-                <input type="number" class="caixaDeTexto" value="Texto 3" readonly>
-                
+                <h4>Nome do jogador:&nbsp; &nbsp; &nbsp; &nbsp; </h4>
+                <input type="text" class="caixaDeTexto" id="File1" value="" readonly>
             </div>
             <br>
             <div>
+                <h4>Nome do personagem: </h4>
+                <input type="text" class="caixaDeTexto" id="File2" value="" readonly>
+            </div>
+            <div>
+                <h4>Alinhamento:&nbsp;</h4>
+                <input type="text" class="caixaDeTexto" id="File3" value="Alinhamento" readonly>
+                
+            </div>
+            <div>
+                <h4>&nbsp;Level:&nbsp;</h4>
+                <input type="number" class="caixaDeTexto" id="File4" value="" readonly>
+                
+            </div>
+            <div>
                 <h4>Raça: </h4>
-                <input type="text" class="caixaDeTexto" value="raça" readonly>
+                <input type="text" class="caixaDeTexto" id="File5" value="Raça" readonly>
             </div>
             <div>
                 <h4>Classe: </h4>
-                <input type="text" class="caixaDeTexto" value="Nome" readonly>
+                <input type="text" class="caixaDeTexto" id="File6" value="Classe" readonly>
+            </div>
+            <div>
+              <h4>Idade:&nbsp;</h4>
+              <input type="number" class="caixaDeTexto" id="File7" value="" readonly>
             </div>
 
 
         </div>
-
-
         <!-- Valores de habilidade -->
-        <div>       
-            <div>
-                <input type="number" class="abilityValues" value="Texto 3" readonly>
+        <div class="containerSkills">       
+          
+            <div class="divisoria">
+                <input type="number" class="abilityValues" id="File8" value="" readonly>
                 <h3>Força</h3>
             </div>
             <div>
-                <input type="number" class="abilityValues" value="Texto 3" readonly>
+                <input type="number" class="abilityValues" id="File9" value="" readonly>
                 <h3>Destreza</h3>
             </div>
             <div>
-                <input type="number" class="abilityValues" value="Texto 3" readonly>
+                <input type="number" class="abilityValues" id="File10" value="" readonly>
                 <h3>Constituiçao</h3>
             </div>
             <div>
-                <input type="number" class="abilityValues" value="Texto 3" readonly>
+                <input type="number" class="abilityValues" id="File11" value="" readonly>
                 <h3>Inteligencia</h3>
             </div>
             <div>
-                <input type="number" class="abilityValues" value="Texto 3" readonly>
+                <input type="number" class="abilityValues" id="File12" value="" readonly>
                 <h3>Sabedoria</h3>
             </div>
             <div>
-                <input type="number" class="abilityValues" value="Texto 3" readonly>
+                <input type="number" class="abilityValues" id="File13" value="" readonly>
                 <h3>Carisma</h3>
             </div>
             <div>
-                <input type="text" class="abilityValues" value="Texto 3" readonly>
+                <input type="number" class="abilityValues" id="File14" value="" readonly>
                 <h3>Poder</h3>
             </div>
- 
+
+                          <!-- Armadura e hp -->
+         <div class="containerLife">
+          <input type="number" class="" id="File15" value="" readonly>
+          <h4>Vida Maxima</h4>
+          <input type="number" class="" id="File16" value="" readonly>
+          <h4>Vida Temporaria</h4>
         </div>
+
+        </div>
+
+       
+
+
+         
        
     </div>
 
