@@ -248,9 +248,8 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #CDCAAC;
+    border-style: double;
+    border-color: #000000;
     border-radius: 3%;
 
 }
@@ -277,10 +276,59 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #CDCAAC;
+    border-style: double;
+    border-color: #080808;
     border-radius: 3%;
+}
+
+/*Proeficiencias*/
+.proficiency{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-style: double;
+    border-color: #080808;
+    border-radius: 3%;
+}
+.proficiency input{
+    display: table-cell;
+    background-color: transparent;  
+    border: none;
+    border-bottom: 2px solid black;
+    min-height: 25px;
+}
+
+/*Itens e magias */
+
+.containerItem{
+    float: left;
+    min-width: 40%; 
+    height: 50%;
+   display: inline-block;
+   
+}
+
+.listItems{
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    border-style: double;
+    border-color: #080808;
+    border-radius: 3%;
+    padding: 5%;
+}
+
+.listItems input{
+    display: table-cell;
+    background-color: transparent;  
+    border: none;
+    border-bottom: 2px solid black;
+    min-height: 25px;
+}
+
+.containerItem div{
+    margin: 5px;
+    margin-bottom: 12%;
 }
 
 
