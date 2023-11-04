@@ -21,9 +21,10 @@
     
           <form name="form_main" class="barraTimer">
             
-            <button type="button" name="start" class="buttonsDice" ><img src="css/img/download.png" alt="" class="imgTimer"></button>
-            <button type="button" name="pause" class="buttonsDice"><img src="css/img/stop.png" alt="" class="imgDice"></button>
-            <button type="button" name="reset" class="buttonsDice"><img src="css/img/reset.png" alt="" class="imgDice"></button>
+            <!-- <button type="button" name="start" class="buttonsDice" ><img src="css/img/download.png" alt="" class="imgTimer"></button> -->
+            <!-- <button type="button" name="pause" class="buttonsDice"><img src="css/img/stop.png" alt="" class="imgDice"></button> -->
+            <!-- <button type="button" name="reset" class="buttonsDice"><img src="css/img/reset.png" alt="" class="imgDice"></button> -->
+            <img src="css/img/timer.png" alt="" class="imgDice">
     
             <div class="Contador">
                 <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
@@ -82,7 +83,7 @@
         <!-- Botao para editar ficha -->
         <div class="btnEdit">
           <button id="botaoEdicao" onclick="toggleEdicao()">
-            <img id="imagemBotao" src="editar.png" alt="Editar">
+            <img id="imagemBotao" src="css/img/lock-fill.svg" alt="Editar">
           </button>
         </div>
 
@@ -155,29 +156,42 @@
                 <h3>Poder</h3>
             </div>
 
-                          <!-- Armadura e hp -->
-         <div class="containerLife">
-          <input type="number" class="" id="File15" value="" readonly>
-          <h4>Vida Maxima</h4>
-          <input type="number" class="" id="File16" value="" readonly>
-          <h4>Vida Temporaria</h4>
-        </div>
+        
 
-        </div>
+          </div>
+                            <!-- Armadura e hp -->
+                            <div class="containerLife">
 
-       
+                              <!-- Vida -->
+                              <div class="hp">
+                                <div>
+                                  <h4>Vida Maxima</h4>
+                                  <input type="number" class="" id="File15" value="" readonly>
+                                </div>
+                                <div>
+                                  <h4>Vida Temporaria</h4>
+                                  <input type="number" class="" id="File16" value="" readonly>
+                                </div>
+                              </div>
 
+                              <!-- Armadura -->
+                              <div class="CA">
+                                <h4>Armadura</h4>
+                                <input type="number" class="" id="File17" value="" readonly>
+                              </div>
 
-         
-       
+                            </div>
+          </div>
+
+    <!-- Anotaçoes -->
+    <div class="anotacoes">
+      <h1>Anotaçoes</h1>
+      <textarea name="" id="notes" cols="30" rows="10"></textarea>
+
     </div>
+    
 
-    <!-- div para anoações do player-->
-    <div class="">
-        <input type="text" id="textoInput" placeholder="Digite algo...">
-        <button id="salvarBotao">Salvar</button>
-        <div id="textoSalvo"></div>
-    </div>
+    
 
 </body>
 <script src="js/scripJogador.js"></script>

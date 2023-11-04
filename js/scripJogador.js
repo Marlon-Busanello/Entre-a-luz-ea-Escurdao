@@ -15,7 +15,8 @@ var files = [
   document.getElementById("File13"),
   document.getElementById("File14"),
   document.getElementById("File15"),
-  document.getElementById("File16")
+  document.getElementById("File16"),
+  document.getElementById("File17"),
 ];
 
 // Carregar conteúdo do localStorage ao carregar a página
@@ -37,6 +38,7 @@ for (var i = 0; i < files.length; i++) {
   });
 }
 
+
 function toggleEdicao() {
   edicaoHabilitada = !edicaoHabilitada;
 
@@ -46,13 +48,33 @@ function toggleEdicao() {
 
   var imagemBotao = document.getElementById("imagemBotao");
   if (edicaoHabilitada) {
-    imagemBotao.src = "editar.png";
+    imagemBotao.src = "css/img/unlock-fill.svg";
     imagemBotao.alt = "Editar";
   } else {
-    imagemBotao.src = "desabilitar.png";
+    imagemBotao.src = "css/img/lock-fill.svg";
     imagemBotao.alt = "Desabilitar";
   }
 }
+
+
+
+
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_//
+
+/* Anotaçoes */
+
+var caixaTexto = document.getElementById("notes");
+
+        // Verifique se há conteúdo salvo localmente e restaure-o
+        if (localStorage.getItem("textoSalvo")) {
+            caixaTexto.value = localStorage.getItem("textoSalvo");
+        }
+
+        // Adicione um ouvinte de evento para salvar o conteúdo ao sair da caixa de texto
+        caixaTexto.addEventListener("blur", function () {
+            localStorage.setItem("textoSalvo", caixaTexto.value);
+        });
+
 
 
 //-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_//
