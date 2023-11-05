@@ -64,14 +64,31 @@
         </nav>
     </header>
 <body class="backGround">
-    <section class="viewFile">
-        <div class="tabTitle" > <p></p><!--Aba guia--></div>
-    </section>
-    <section class="masterlibrary"> <!-- section para o mestre navegar nos arquivos abertos -->
+    <div class="viewFile">
+        <div class="image-container">
+            <img id="image-view" src="imagem1.jpg" alt="Imagem 1">
+        </div>
+        
+    </div>
+
+    <div class="masterlibrary"> <!-- section para o mestre navegar nos arquivos abertos -->
         <div><!--Aba guia--></div>
-    </section>
+        
+        <div>
+            <button id="fichas-button" class="btnLibrary" onclick="toggleFichas()">
+                <img id="fichas-image"  src="css/img/icone pasta.png" alt="Fichas">Jogadores 
+            </button>
+            <div id="botoes-imagem" class="libraryOptions" style="display: none;">
+                <div>
+                <button id="imagem1-button" class="btnLibrary" onclick="trocarImagem('imagem1.jpg')"> <img src="css/img/arquivo-aberto.png"  alt=""><h4>eu</h4></button><br></div>
+                <button id="imagem2-button" class="btnLibrary" onclick="trocarImagem('imagem2.jpg')">Jogador 2</button><br>
+                <button id="imagem3-button" class="btnLibrary" onclick="trocarImagem('imagem3.jpg')">Jogador 3</button>
+            </div>
+        </div>
+    </div>
     <section> <!-- section para mostrar o explorador de arquivos -->
         <div></div>
     </section>
 </body>
+<script src="js/scriptMestre.js" ></script>
 </html>
