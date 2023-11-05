@@ -157,10 +157,8 @@
 }
 
 .backGround{
+    background-image: url('img/fundoMestre.gif');
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-image: url('img/fundo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

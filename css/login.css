@@ -128,5 +128,19 @@ body {
     width: 100%; /* Ocupa toda a largura */
 }
 
+.wrapper{
+    min-height: 250px;
+    max-height: 500px;
+    min-width: 350px;
+    max-width: 450px;
+    padding: 10px;
+
+    background-color: rgba(255, 255, 255, 0.281); /* O último valor (0.5) controla a transparência (de 0 a 1) */
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ffffff17;    
+    overflow: hidden;
+    border-radius: 3%;
+}
 
 
