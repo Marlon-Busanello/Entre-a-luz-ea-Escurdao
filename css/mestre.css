@@ -135,7 +135,7 @@ body {
     min-width: 700px;
     max-width: 1200px;
     min-height: 350px;
-    max-height: 900px;
+    max-height: 1200px;
     padding: 10px;
     margin-left: 2%;
     margin-top: 7%;
@@ -188,8 +188,10 @@ body {
 /* Biblioteca do mestre*/
 
 .image-container {
-    width: 400px;
-    height: 400px;
+    min-width: 400px;
+    max-width: 1000px;
+    min-height: 400px;
+    max-height: 900px;
     border: 1px solid #ccc;
 }
 
@@ -205,6 +207,7 @@ body {
     justify-content: center;
     padding: 2px;
     margin: 3px;
+    font-size: 15px;
 }
 
 .btnLibrary img{
@@ -213,19 +216,22 @@ body {
 }
 
 .libraryOptions{
-    display: inline-flex;
+    display: contents;
     margin-top: 6px;    
-    justify-content: center ;
 
 }
 
-.libraryOptions button{
-    display: flex;
-    
-    font-size: 20px;
+.btnLibraryTitulos{
+    border: none;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 3px;
+    font-weight: 900;
+
 }
 
-.libraryOptions img{
-    width: 30px;
-    height: 30px;
-}
+
+
+

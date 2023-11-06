@@ -73,18 +73,52 @@
 
     <div class="masterlibrary"> <!-- section para o mestre navegar nos arquivos abertos -->
         <div><!--Aba guia--></div>
+            <!-- Fichas dos player  -->
         
-        <div>
-            <button id="fichas-button" class="btnLibrary" onclick="toggleFichas()">
-                <img id="fichas-image"  src="css/img/icone pasta.png" alt="Fichas">Jogadores 
-            </button>
-            <div id="botoes-imagem" class="libraryOptions" style="display: none;">
+
+    <div class="libraryOptions">
+        
                 <div>
-                <button id="imagem1-button" class="btnLibrary" onclick="trocarImagem('imagem1.jpg')"> <img src="css/img/arquivo-aberto.png"  alt=""><h4>eu</h4></button><br></div>
-                <button id="imagem2-button" class="btnLibrary" onclick="trocarImagem('imagem2.jpg')">Jogador 2</button><br>
-                <button id="imagem3-button" class="btnLibrary" onclick="trocarImagem('imagem3.jpg')">Jogador 3</button>
+                    <button id="btnJogadores" class="btnLibraryTitulos" onclick="toggleButtons('Jogadores')">Jogadores</button><br>
+                    <div id="Jogadores" class="hidden">
+                        <button id="imagem4-button" class="btnLibrary" onclick="trocarImagem('ReferenciasMetre/jogadores/jogador1.png')">Abigail</button> <br>
+                        <button id="imagem5-button" class="btnLibrary" onclick="trocarImagem('ReferenciasMetre/jogadores/jogador2.png')">Cleiton</button> <br>
+                        <button id="imagem6-button" class="btnLibrary" onclick="trocarImagem('ReferenciasMetre/jogadores/jogador3.png')">Klotildes</button><br>
+                    </div>
+                </div>
+
+
+            <!-- Campanha -->
+                <button id="outro-button" class="btnLibraryTitulos" onclick="toggleButtons('botoes-outro')">Campanha</button>
+                <div id="botoes-outro" class="hidden">
+
+                <button id="btnArea1" class="btnLibraryTitulos" onclick="toggleButtons('area1S')">Floresta</button>
+                <div id="area1S" class="hidden">
+                    <button id="imagem4-button" class="btnLibrary" onclick="trocarImagem('ReferenciasMetre/terrenos/Floresta.jpg')">Grid Floresta</button><br>
+                    <button id="imagem5-button" class="btnLibrary" onclick="trocarImagem('ReferenciasMetre/terrenos/Rio.jpg')">Grid Rio</button><br>
+
+                    <!-- Npc -->
+                    <div>
+                        <button id="btnA1Npc"  class="btnLibraryTitulos" onclick="toggleButtons('npc1')">Npc</button><br>
+                        <div id="npc1" class="hidden">
+                            <button id="imagem4-button" class="btnLibrary" onclick="trocarImagem('ReferenciasMetre/npc/npc1.jpg')">Halfiling Paladina</button><br>
+                            <button id="imagem5-button" class="btnLibrary" onclick="trocarImagem('ReferenciasMetre/npc/npc2.jpg')">Humano Bardo</button><br>
+                        </div>
+                    </div>
+
+                <!-- Monstros -->
+                    <div>
+                        <button id="btnA1M" class="btnLibraryTitulos" onclick="toggleButtons('Monstro1')">Monstros</button>
+                        <div id="Monstro1" class="hidden">
+                            <button id="imagem4-button" class="btnLibrary" onclick="trocarImagem('ReferenciasMetre/monstros/Kobold Comun.jpg')">Kobold Comun</button><br>  
+                            <button id="imagem5-button" class="btnLibrary" onclick="trocarImagem('ReferenciasMetre/monstros/Kobold Dirtclaw.jpg')">Kobold Dirtclaw</button><br>
+                            <button id="imagem6-button" class="btnLibrary" onclick="trocarImagem('ReferenciasMetre/monstros/Kobold Axundar.jpg')">Kobold Axundar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        
+    </div>
     </div>
     <section> <!-- section para mostrar o explorador de arquivos -->
         <div></div>

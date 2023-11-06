@@ -1,5 +1,5 @@
 /*Biblioteca do mestre */
-
+/*
 function toggleFichas() {
   var fichasButton = document.getElementById("fichas-button");
   var fichasImage = document.getElementById("fichas-image");
@@ -19,7 +19,30 @@ function trocarImagem(novaImagem) {
   imageView.src = novaImagem;
   imageView.alt = novaImagem;
 }
+*/
+function toggleButtons(elementId) {
+  var element = document.getElementById(elementId);
 
+  // Alterna a visibilidade dos botões
+  if (element.classList.contains("hidden")) {
+      element.classList.remove("hidden");
+  } else {
+      element.classList.add("hidden");
+  }
+}
+
+function trocarImagem(novaImagem, botao) {
+  var imageView = document.getElementById("image-view");
+  imageView.src = novaImagem;
+  imageView.alt = novaImagem;
+
+  // Altera a imagem do botão
+  var button = document.getElementById(botao + "-button");
+  if (button) {
+      button.innerHTML = `<img src="icone_${botao}_ativo.png" alt="${botao}">`;
+  }
+
+}
 
 
 
