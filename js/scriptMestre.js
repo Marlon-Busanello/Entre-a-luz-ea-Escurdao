@@ -1,25 +1,4 @@
-/*Biblioteca do mestre */
-/*
-function toggleFichas() {
-  var fichasButton = document.getElementById("fichas-button");
-  var fichasImage = document.getElementById("fichas-image");
-  var botoesImagem = document.getElementById("botoes-imagem");
 
-  if (botoesImagem.style.display === "none") {
-      fichasImage.src = "css/img/icone-pasta-aberta.png"; // Altere o caminho da imagem ativa
-      botoesImagem.style.display = "block";
-  } else {
-      fichasImage.src = "css/img/icone pasta.png"; // Altere o caminho da imagem inativa
-      botoesImagem.style.display = "none";
-  }
-}
-
-function trocarImagem(novaImagem) {
-  var imageView = document.getElementById("image-view");
-  imageView.src = novaImagem;
-  imageView.alt = novaImagem;
-}
-*/
 function toggleButtons(elementId) {
   var element = document.getElementById(elementId);
 
