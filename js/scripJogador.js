@@ -17,6 +17,22 @@ var files = [
   document.getElementById("File15"),
   document.getElementById("File16"),
   document.getElementById("File17"),
+  document.getElementById("File18"),
+  document.getElementById("File19"),
+  document.getElementById("File20"),
+  document.getElementById("File21"),
+  document.getElementById("File22"),
+  document.getElementById("File23"),
+  document.getElementById("File24"),
+  document.getElementById("File25"),
+  document.getElementById("File26"),
+  document.getElementById("File27"),
+  document.getElementById("File28"),
+  document.getElementById("File29"),
+  document.getElementById("File30"),
+  document.getElementById("File31"),
+  document.getElementById("File32"),
+  document.getElementById("File33"),
 ];
 
 // Carregar conteúdo do localStorage ao carregar a página

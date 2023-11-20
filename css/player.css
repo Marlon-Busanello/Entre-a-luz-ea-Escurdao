@@ -20,8 +20,26 @@ body {
     display: flex;
 }
 
+
+@keyframes colorChange {
+    from {
+      color: rgb(248, 213, 59); /* Cor inicial (amarelo) */
+    }
+    to {
+      color: rgba(14, 8, 0, 0); /* Cor final (um tom mais escuro) */
+    }
+  }
+
+ .nav h1 {
+    font-size: 2em;
+    animation: colorChange 15s infinite alternate; /* 2s de duração, infinito efeito alternado */
+    font-family: Metal Mania;
+    font-size: 25px;
+    margin-left: 15px;
+  }
+
 .nav {
-    background-image: url('img/nav2.png');
+   background-color: #00000071;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
