@@ -1,8 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+*{
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    background-image: url('img/fundo.jpg');
+    display: flex;
+    background-image: url('img/vU3JTB6.gif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -23,6 +29,10 @@ body {
     display: flex;
     align-items: center;
 
+
+  max-width: auto;
+  min-width: 350px;
+
     justify-content: space-between;
     color: white; /* Cor do texto */
     font-family: Arial, sans-serif;
@@ -36,6 +46,21 @@ body {
     
 }
 
+
+@keyframes colorChange {
+    from {
+      color: yellow; /* Cor inicial (amarelo) */
+    }
+    to {
+      color: darkorange; /* Cor final (um tom mais escuro) */
+    }
+  }
+
+ .nav h1 {
+    font-size: 2em;
+    animation: colorChange 2s infinite alternate; /* 2s de duração, infinito efeito alternado */
+  }
+
 .logo {
     width: 150px;
     height: 75px;
@@ -46,6 +71,8 @@ body {
 .temporario{
     bottom: auto;
 }
+
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 
 /* -Cronometro*/
 
@@ -59,7 +86,8 @@ body {
     border-color:#CDCAAC ;
     margin-left:15% ;
     box-sizing: content-box;
-    width: 100%;
+    min-width: 100px;
+    max-width: 200px;
     height: 50px;
     align-items: center;
 }
@@ -73,11 +101,9 @@ body {
 }
 
 .Contador{ /*String do contador*/
-    font-size:25px;
-    width: 40%;
+    width: 100px;
+    font-size:20px;
     justify-content: center;
-    text-align: end;
-    padding: 3%;
     color: black;
     font-family: 'Metal Mania';
    
@@ -101,82 +127,311 @@ body {
 }
 
 
-
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 
 
 /* Sistema de dados*/
 .barraDados{
     display: inline-flex;
     justify-content: start;
+    align-items: center;
     background-color: #D9D9D9;
     border-style: solid;
     border-width:2px;
     border-color: #CDCAAC;
     margin-right: 5%;
     margin-left: 20%;
+    padding: 1px;
     box-sizing: content-box;
-    width: 423px;
-    height: 50px;
+    min-width: 300px;
+    max-width: 600px;
+    height: 55px;
+    background-color: #D9D9D9;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #CDCAAC;
+    overflow: hidden;
+    border-radius: 3%;
 
 }
 
 .imgDice{
-    width: 50px;    
-    height: 50px;
+    align-items: center;
+    max-width: 100%;
+    height: 48px;
+    margin-top: 5%;
     background-color: transparent;
 }
 
 .buttonsDice{
     width: 50px;
     height: 50px;
-    border: none;
+    margin: 5px;
     background-color: transparent;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5%;
     
 }
 
 
 .resultDice{
-    width: 53px;
+    width: 50px;
     height:50px;
-    margin-top:0%;
-    margin-left: 38%;
+    margin: 5px;
     font-size: 45px;
     text-align: center;
-    color: green;
-    background-color: #898989;
-  /*  border-style: solid;
-    border-width:2px;
-    border-color: #000000;*/
+    color: rgb(0, 0, 0);
+    background-color: #a8a8a877;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5%;
+    position: relative;
     
 }
 
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+
+ /* Limpa o float para evitar problemas de layout */
+ .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* Aplica a classe clearfix à div pai para limpar o float */
+  .viewFile::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
 /*Visualizacao das ficha e anotacoes*/
-.viewFile{ /*Aba de visualizacao de arquivos dpo mestre*/
-    width: 770px;
-    height: 500px;
-    margin-left: 5%;
-    margin-top: 13%;
-    background-color: #898989;
-    border-style:solid;
-    border-width:2px;
-    border-color:#CDCAAC
-   
+.viewFile {
+    min-width: 350px;
+    max-width: 800px;
+    min-height: 350px;
+    max-height: 900px;
+    padding: 10px;
+    margin-left: 2%;
+    margin-top: 7%;
+    margin-bottom: 1%;
+    background-color: rgba(243, 230, 214, 0.815); /* O último valor (0.5) controla a transparência (de 0 a 1) */
+    border-style: solid;
+    border-width: 2px;
+    border-color: #CDCAAC;
+    overflow: hidden;
+    border-radius: 3%;
+    position: relative;
+  /* Adicione position: relative para criar um contexto de posicionamento para elementos filhos */
+    font-family: Metal Mania;
+    font-size: 18px;
+
+    
+  }
+  .viewFile h4{
+    padding: 5px;
+  }
+
+  /* botao de editar ficha */
+.btnEdit {
+    position: absolute;
+    margin-left: 92%;
+    padding: 1px;
+    cursor: pointer;
+  }
+
+.btnEdit img{
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+}
+.btnEdit button{
+    background-color: transparent;
+    border: none;
+}
+
+
+
+/*Ponto de habilidade*/
+
+.containerSkills {
+    float: left;
+    min-width: 15%; 
+}
+
+
+
+
+/*Armadura e hp*/
+
+.containerLife {
+    float: left;
+    min-width: 40%; 
+    min-height: 150px;
+    max-height: 250px;
+    
+}
+
+/*Vida*/
+
+.hp{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-style: double;
+    border-color: #000000;
+    border-radius: 3%;
+
+}
+
+.containerLife input{
+    min-height: 50px;
+    max-height: 80px;
+    min-width: 50px;
+    max-width: 80px;
+    padding: 1px;
+    margin: 2px;
+    text-align: center;
+
+}
+
+.containerLife div{
+    margin: 5px;
+    padding: 5px;
+}
+
+/*Armadura */
+
+.CA{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-style: double;
+    border-color: #080808;
+    border-radius: 3%;
+}
+
+/*Proeficiencias*/
+.proficiency{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-style: double;
+    border-color: #080808;
+    border-radius: 3%;
+}
+.proficiency input{
+    display: table-cell;
+    background-color: transparent;  
+    border: none;
+    border-bottom: 2px solid black;
+    min-height: 25px;
+}
+
+/*Itens e magias */
+
+.containerItem{
+    float: left;
+    min-width: 40%; 
+    height: 50%;
+   display: inline-block;
    
 }
+
+.listItems{
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    border-style: double;
+    border-color: #080808;
+    border-radius: 3%;
+    padding: 5%;
+}
+
+.listItems input{
+    display: table-cell;
+    background-color: transparent;  
+    border: none;
+    border-bottom: 2px solid black;
+    min-height: 25px;
+}
+
+.containerItem div{
+    margin: 5px;
+    margin-bottom: 12%;
+}
+
+
+
+             
+.containerLife input{
+    min-width: 60px;
+    max-width: 120px;
+
+}
+
+.life{
+
+}
+
+/*Informaçoes basicas*/
+
+.basicInformation{
+   margin: 5px;
+   padding: 2px;
+}
+
+.basicInformation div{
+    display: inline-flex ;
+    margin: 2px;
+    padding: 2px;
+}
+
+
+/* Valores de habilidade*/
+.abilityValues{
+    width: 3rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin: 5px;
+    text-align: center;
+}
+
+
+
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 
 .anotacoes{/*Biblioteca do mestre*/
-
-    width: 470px;
-    height: 500px;
-    margin-top: -27.95%;
-    margin-left: 65%;
-    background-color: #898989;
-    border-style:solid;
-    border-width:2px;
-    border-color:#CDCAAC
+    min-width: 400px;
+    max-width: 1000px;
+    min-height: 350px;
+    max-height: 900px;
+    padding: 10px;
+    margin-left: 5%;
+    margin-top: 7%;
+    margin-bottom: 1%;
+    background-color: rgba(243, 230, 214, 0.815); /* O último valor (0.5) controla a transparência (de 0 a 1) */
+    border-style: solid;
+    border-width: 2px;
+    border-color: #CDCAAC;
+    overflow: hidden;
+    border-radius: 3%;
+    position: relative
 }
 
+.anotacoes textarea{
+    width: 95%;
+    height: 95%;
+    background-color:  rgba(243, 230, 214, 0.0); ;
+    border: none;
+}
 .tabTitle{
     width: 150px;
     height: 40px;

@@ -8,6 +8,16 @@
     width: 150px;
     height: 75px;
 }
+body {
+    display: flex;
+    background-image: url('img/fundoMestre.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: #f2f2f2;
+    justify-content: space-between;
+}
 
 
 .nav-bar{ /*Barra de navegacao*/
@@ -122,27 +132,45 @@
 }
 
 .viewFile{ /*Aba de visualizacao de arquivos dpo mestre*/
-    width: 770px;
-    height: 500px;
-    margin-left: 5%;
-    margin-top: 13%;
-    background-color: #898989;
-    border-style:solid;
-    border-width:2px;
-    border-color:#CDCAAC
+    min-width: 700px;
+    max-width: 1200px;
+    min-height: 350px;
+    max-height: 1200px;
+    padding: 10px;
+    margin-left: 2%;
+    margin-top: 7%;
+    margin-bottom: 1%;
+    background-color: rgba(243, 230, 214, 0.815); /* O último valor (0.5) controla a transparência (de 0 a 1) */
+    border-style: solid;
+    border-width: 2px;
+    border-color: #CDCAAC;
+    overflow: hidden;
+    border-radius: 3%;
+    position: relative;
+  /* Adicione position: relative para criar um contexto de posicionamento para elementos filhos */
+    font-family: Metal Mania;
+    font-size: 18px;
    
    
 }
 
 .masterlibrary{/*Biblioteca do mestre*/
 
-    width: 470px;
-    height: 500px;
-    margin-top: 13%;
-    background-color: #898989;
-    border-style:solid;
-    border-width:2px;
-    border-color:#CDCAAC
+    min-width: 400px;
+    max-width: 1000px;
+    min-height: 600px;
+    max-height: 900px;
+    padding: 10px;
+    margin-left: 5%;
+    margin-top: 7%;
+    margin-bottom: 1%;
+    background-color: rgba(243, 230, 214, 0.815); /* O último valor (0.5) controla a transparência (de 0 a 1) */
+    border-style: solid;
+    border-width: 2px;
+    border-color: #CDCAAC;
+    overflow: hidden;
+    border-radius: 3%;
+    position: relative
 }
 
 .tabTitle{
@@ -156,14 +184,54 @@
     border-color:#CDCAAC
 }
 
-.backGround{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-image: url('img/fundo.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-color: #f2f2f2;
+
+/* Biblioteca do mestre*/
+
+.image-container {
+    min-width: 400px;
+    max-width: 1000px;
+    min-height: 400px;
+    max-height: 900px;
+    border: 1px solid #ccc;
 }
+
+.hidden {
+    display: none;
+
+}
+
+.btnLibrary{
+    border: none;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 3px;
+    font-size: 15px;
+}
+
+.btnLibrary img{
+    width: 35px;
+    height: 35px;
+}
+
+.libraryOptions{
+    display: contents;
+    margin-top: 6px;    
+
+}
+
+.btnLibraryTitulos{
+    border: none;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 3px;
+    font-weight: 900;
+
+}
+
+
+
+
