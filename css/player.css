@@ -21,7 +21,7 @@ body {
 }
 
 .nav {
-    background-image: url('img/nav2.png');
+    background-color: rgba(0, 0, 0, 0.357);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -43,22 +43,27 @@ body {
     padding: 0;
     margin: 0;
     position: absolute;
+    align-items: center;
+    
     
 }
 
 
 @keyframes colorChange {
     from {
-      color: yellow; /* Cor inicial (amarelo) */
+      color:rgb(255, 200, 0);
     }
     to {
-      color: darkorange; /* Cor final (um tom mais escuro) */
+      color:rgba(0, 0, 0, 0);
     }
   }
 
  .nav h1 {
-    font-size: 2em;
-    animation: colorChange 2s infinite alternate; /* 2s de duração, infinito efeito alternado */
+    font-family: Metal Mania;
+    animation: colorChange 10s infinite alternate; 
+    font-size: 25px;
+    margin-left: 15px;
+    margin-top: 8px;
   }
 
 .logo {
