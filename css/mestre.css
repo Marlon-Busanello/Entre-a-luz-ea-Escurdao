@@ -21,7 +21,7 @@ body {
 
 
 .nav-bar{ /*Barra de navegacao*/
-    background-image: url('img/nav2.png');
+    background-color: rgba(0, 0, 0, 0.357);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -39,33 +39,34 @@ body {
 
 }
 
-.Timer {
-    height:50px;
-    width: 50px;
-    background-color: #898989;
-    image-resolution: 100%;
-    border-color: black;
 
-}
-.imgbotao{
-    height: 50px;
-    width: 50px; 
-    image-resolution: 50%;
-    background-color: transparent;
-    border: none;
+@keyframes colorChange {
+    from {
+      color:rgb(255, 200, 0);
+    }
+    to {
+      color:rgba(0, 0, 0, 0);
+    }
+  }
+
+ .nav-bar h1 {
+    font-family: Metal Mania;
+    animation: colorChange 10s infinite alternate; 
+    font-size: 23px;
+    margin-left: 15px;
+    margin-top: 8px;
+  }
+
+.logo {
+    width: 150px;
+    height: 75px;
 }
 
-.buttonsTimer{
-    height: 50px;
-    width: 50px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
+/* -Cronometro*/
 
-.barraTimer{
+.barraTimer{ /*Barra do cronometro*/
     display: inline-flex;
-    justify-content: start;
+    justify-content: space-between;
     text-align:start;
     background-color: #D9D9D9;
     border-style:solid;
@@ -73,32 +74,118 @@ body {
     border-color:#CDCAAC ;
     margin-left:15% ;
     box-sizing: content-box;
-    width: 390px;
+    min-width: 200px;
+    max-width: 420px;
     height: 50px;
+    align-items: center;
 }
 
-.Contador{
-    margin-top: 5.5%;
-    margin-left: 17%;
-    font-size: 35px;
+.Timer {
+    height:50px;
+    width: 50px;
+    background-color: #898989;
+    image-resolution: 150%;
+    border-color: black;
+}
+
+.Contador{ /*String do contador*/
+    width: 100px;
+    font-size:20px;
     justify-content: center;
+    color: black;
+    font-family: 'Metal Mania';
+    padding: 5px;
+   
 }
 
 
+.buttonsTimer{
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    
+}
+
+.imgTimer{
+    width: 50px;    
+    height: 50px;
+    background-color: transparent;
+
+}
+
+
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+
+
+/* Sistema de dados*/
 .barraDados{
     display: inline-flex;
     justify-content: start;
+    align-items: center;
     background-color: #D9D9D9;
     border-style: solid;
     border-width:2px;
     border-color: #CDCAAC;
     margin-right: 5%;
-    margin-left: 17%;
+    margin-left: 20%;
+    padding: 1px;
     box-sizing: content-box;
-    width: 413px;
-    height: 50px;
+    min-width:480px;
+    max-width: 690px;
+    height: 55px;
+    background-color: #D9D9D9;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #CDCAAC;
+    overflow: hidden;
+    border-radius: 3%;
 
 }
+
+.imgDice{
+    align-items: center;
+    max-width: 100%;
+    height: 48px;
+    margin-top: 5%;
+    background-color: transparent;
+}
+
+.buttonsNice{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5%;
+    
+}
+
+
+.resultDice{
+    width: 50px;
+    height:50px;
+    margin: 5px;
+    font-size: 45px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: #a8a8a877;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5%;
+    position: relative;
+    
+}
+
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+
 
 .imgDice{
     width: 50px;    
@@ -115,21 +202,6 @@ body {
     
 }
 
-
-.resultDice{
-    width: 53px;
-    height:50px;
-    margin-top:0%;
-    margin-left: 19%;
-    font-size: 45px;
-    text-align: center;
-    color: green;
-    background-color: #898989;
-  /*  border-style: solid;
-    border-width:2px;
-    border-color: #000000;*/
-    
-}
 
 .viewFile{ /*Aba de visualizacao de arquivos dpo mestre*/
     min-width: 700px;

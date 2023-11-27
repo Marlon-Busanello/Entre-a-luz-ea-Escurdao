@@ -107,3 +107,37 @@ function timer() {
 function returnData(input) {
   return input >= 10 ? input : `0${input}`
 }
+
+/*-_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ -_-_ */
+
+// Função para gerar um valor aleatório entre 1 e um número específico
+
+function rolarDado(maxValue, resultElement) {
+  let resultado;
+  if (maxValue === 100) {
+    resultado = Math.floor(Math.random() * (maxValue + 1));
+  } else {
+    resultado = Math.floor(Math.random() * maxValue) + 1;
+  }
+  resultElement.textContent = resultado;
+}
+
+// Adiciona ouvintes de evento a todos os botões
+const dados = [
+  { id: "rolarD20", maxValue: 20 },
+  { id: "rolarD12", maxValue: 12 },
+  { id: "rolarD10", maxValue: 10 },
+  { id: "rolarD8", maxValue: 8 },
+  { id: "rolarD6", maxValue: 6 },
+  { id: "rolarD4", maxValue: 4 },
+  { id: "rolarD100", maxValue: 100 }
+];
+
+dados.forEach(dado => {
+  const botao = document.getElementById(dado.id);
+  const resultDice = document.querySelector("#resultRolagem");
+
+  botao.addEventListener("click", function() {
+    rolarDado(dado.maxValue, resultDice);
+  });
+});

@@ -58,7 +58,7 @@ body {
     }
   }
 
- .nav h1 {
+ .nav-bar h1 {
     font-family: Metal Mania;
     animation: colorChange 10s infinite alternate; 
     font-size: 25px;

@@ -10,57 +10,65 @@
     <header> <!-- header para fazer a barra superior da area do mestre -->
         <nav class="nav-bar"> <!-- barra de navegação da página-->
 
-        <section class="logo"> <!-- section para o titulo da página -->
-            <div> 
-                <img src="css/img/logo.jpg" alt="logo" class="logo">
-            </div>
-        </section>  
-        <section class="barraTimer"> <!-- section para o cronometro -->
-            <div> <!-- imagem para o cronometro -->
-                <img src="css/img/timer.png" alt="imagem para o cronometro" class="Timer"/>
-            </div>
-            
-            <div> <!-- botao start cronometro -->
-                <button type="button" class="buttonsTimer"> <img src="css/img/play.png" alt="imagem para o botao de start" class="imgbotao"/></button> 
-            </div>
-            <div> <!-- botao pause cronometro -->
-                <button type="button" class="buttonsTimer"> <img src="css/img/stop.png" alt="imagem para o botao de pausa"  class="imgbotao"/></button> 
-            </div>
-            <div> <!-- botao reset cronometro -->
-            <button type="button" class="buttonsTimer"> <img src="css/img/reset.png" alt="imagem para o botao de reset" class="imgbotao"/></button>
-            </div>
-            <div> <!-- div para exibir o tempo passando do cronometro -->
-                <p class="Contador">00:00:00</p>
-            </div>
-    
-        </section>
+            <section class="logo"> <!-- section para o titulo da página -->
+                <div> 
+                    <h1>Entre a luz <br> e a escuridao </h1>
+                </div>
+              </section>
 
-        <section class="barraDados"> <!-- section para a ferramenta de rolagem de dados -->
-            <div> <!-- botao para D20 -->
-                <button type="button"class="buttonsDice"> <img src="css/img/d20.png" alt="imagem para o botao de D20" class="imgDice" /></button>
-            </div>
-            <div> <!-- botao para D12 -->
-                <button type="button"class="buttonsDice"> <img src="css/img/d12.png" alt="imagem para o botao de D12" class="imgDice" /></button>
-            </div>
-            <div> <!-- botao para D10 -->
-                <button type="button"class="buttonsDice"> <img src="css/img/d10.png" alt="imagem para o botao de D10" class="imgDice" /></button>
-            </div>
-            <div> <!-- botao para D8 -->
-                <button type="button" class="buttonsDice"> <img src="css/img/d8.png" alt="imagem para o botao de D8" class="imgDice" /></button>
-            </div>
-            <div> <!-- botao para D6 -->
-                <button type="button" class="buttonsDice"> <img src="css/img/d6.png" alt="imagem para o botao de D6" class="imgDice" /></button>
-            </div>
-            <div> <!-- botao para D4 -->
-                <button type="button" class="buttonsDice"> <img src="css/img/d4.png" alt="imagem para o botao de D4" class="imgDice" /></button>
-            </div>
-            <div> <!-- botao para D100 -->
-                <button type="button" class="buttonsDice"> <img src="css/img/d100.png " alt="imagem para o botao de D100" class="imgDice" /></button>
-            </div>
-            <div> <!-- div para exibir o resultado da rolagem -->
-            <p class="resultDice">20</p>
-            </div>
-        </section>
+        <form name="form_main" class="barraTimer">
+
+            <img src="css\img\timer.png" class="buttonsDice">
+            <button type="button" name="start" class="buttonsDice" ><img src="css/img/download.png" alt="" class="imgTimer"></button>
+            <button type="button" name="pause" class="buttonsDice"><img src="css/img/stop.png" alt="" class="imgDice"></button>
+            <button type="button" name="reset" class="buttonsDice"><img src="css/img/reset.png" alt="" class="imgDice"></button>
+    
+            <div class="Contador">
+                <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
+              </div>
+          </form>
+
+                  <!-- section para a ferramenta de rolagem de dados -->
+                  <section class="barraDados">
+                    <div>
+                      <button type="button" class="buttonsNice" id="rolarD20">
+                        <img src="css/img/d20.png" alt="Imagem para o botão de D20" class="imgTimer" />
+                      </button>
+                    </div>
+                    <div>
+                      <button type="button" class="buttonsNice" id="rolarD12">
+                        <img src="css/img/d12.png" alt="Imagem para o botão de D12" class="imgTimer" />
+                      </button>
+                    </div>
+                    <div>
+                      <button type="button" class="buttonsNice" id="rolarD10">
+                        <img src="css/img/d10.png" alt="Imagem para o botão de D10" class="imgTimer" />
+                      </button>
+                    </div>
+                    <div>
+                      <button type="button" class="buttonsNice" id="rolarD8">
+                        <img src="css/img/d8.png" alt="Imagem para o botão de D8" class="imgTimer" />
+                      </button>
+                    </div>
+                    <div>
+                      <button type="button" class="buttonsNice" id="rolarD6">
+                        <img src="css/img/d6.png" alt="Imagem para o botão de D6" class="imgTimer" />
+                      </button>
+                    </div>
+                    <div>
+                      <button type="button" class="buttonsNice" id="rolarD4">
+                        <img src="css/img/d4.png" alt="Imagem para o botão de D4" class="imgTimer" />
+                      </button>
+                    </div>
+                    <div>
+                      <button type="button" class="buttonsNice" id="rolarD100">
+                        <img src="css/img/d100.png" alt="Imagem para o botão de D100" class="imgTimer" />
+                      </button>
+                    </div>
+                    <div>
+                      <p class="resultDice" id="resultRolagem"></p>
+                    </div>
+                  </section>
         </nav>
     </header>
 <body class="backGround">
