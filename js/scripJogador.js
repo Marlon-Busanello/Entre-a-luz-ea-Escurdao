@@ -32,65 +32,56 @@ var files = [
   document.getElementById("File30"),
   document.getElementById("File31"),
   document.getElementById("File32"),
-  document.getElementById("File33"),
-
+  document.getElementById("File33")
 ];
 
-// Carregar conteúdo do localStorage ao carregar a página
 window.onload = function() {
+  var jogadorAtual = localStorage.getItem("jogadorAtual");
+
   for (var i = 0; i < files.length; i++) {
-    var conteudoSalvo = localStorage.getItem(files[i].id);
-    if (conteudoSalvo) {
-      files[i].value = conteudoSalvo;
-    }
+      // Use o jogador atual como parte da chave para carregar o conteúdo
+      var conteudoSalvo = localStorage.getItem(jogadorAtual + "_" + files[i].id);
+      if (conteudoSalvo) {
+          files[i].value = conteudoSalvo;
+      }
   }
+
+  // Anotações específicas para cada jogador
+  var caixaTexto = document.getElementById("notes");
+  if (localStorage.getItem("textoSalvo_" + jogadorAtual)) {
+      caixaTexto.value = localStorage.getItem("textoSalvo_" + jogadorAtual);
+  }
+
+  caixaTexto.addEventListener("blur", function () {
+      localStorage.setItem("textoSalvo_" + jogadorAtual, caixaTexto.value);
+  });
 };
 
-// Salvar conteúdo no localStorage quando as caixas de texto perdem o foco
 for (var i = 0; i < files.length; i++) {
   files[i].addEventListener("blur", function(e) {
-    if (edicaoHabilitada) {
-      localStorage.setItem(e.target.id, e.target.value);
-    }
+      var jogadorAtual = localStorage.getItem("jogadorAtual");
+      if (edicaoHabilitada) {
+          // Use o jogador atual como parte da chave para salvar o conteúdo
+          localStorage.setItem(jogadorAtual + "_" + e.target.id, e.target.value);
+      }
   });
 }
-
-
 function toggleEdicao() {
-  edicaoHabilitada = !edicaoHabilitada;
+    edicaoHabilitada = !edicaoHabilitada;
 
-  for (var i = 0; i < files.length; i++) {
-    files[i].readOnly = !edicaoHabilitada;
-  }
+    for (var i = 0; i < files.length; i++) {
+        files[i].readOnly = !edicaoHabilitada;
+    }
 
-  var imagemBotao = document.getElementById("imagemBotao");
-  if (edicaoHabilitada) {
-    imagemBotao.src = "css/img/unlock-fill.svg";
-    imagemBotao.alt = "Editar";
-  } else {
-    imagemBotao.src = "css/img/lock-fill.svg";
-    imagemBotao.alt = "Desabilitar";
-  }
+    var imagemBotao = document.getElementById("imagemBotao");
+    if (edicaoHabilitada) {
+        imagemBotao.src = "css/img/unlock-fill.svg";
+        imagemBotao.alt = "Editar";
+    } else {
+        imagemBotao.src = "css/img/lock-fill.svg";
+        imagemBotao.alt = "Desabilitar";
+    }
 }
-
-
-
-
-//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_//
-
-/* Anotaçoes */
-
-var caixaTexto = document.getElementById("notes");
-
-        // Verifique se há conteúdo salvo localmente e restaure-o
-        if (localStorage.getItem("textoSalvo")) {
-            caixaTexto.value = localStorage.getItem("textoSalvo");
-        }
-
-        // Adicione um ouvinte de evento para salvar o conteúdo ao sair da caixa de texto
-        caixaTexto.addEventListener("blur", function () {
-            localStorage.setItem("textoSalvo", caixaTexto.value);
-        });
 
 
 
