@@ -58,7 +58,7 @@ body {
     }
   }
 
- .nav-bar h1 {
+ .nav h1 {
     font-family: Metal Mania;
     animation: colorChange 10s infinite alternate; 
     font-size: 25px;
@@ -242,6 +242,10 @@ body {
   }
   .viewFile h4{
     padding: 5px;
+  }
+
+  .viewFile input{
+    font-size: 19px;
   }
 
   /* botao de editar ficha */
